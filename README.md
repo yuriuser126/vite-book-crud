@@ -31,37 +31,31 @@ cd boot-backend
 ./gradlew bootRun
 ```
 
-기본 포트: http://localhost:8080
+- 기본 포트: `http://localhost:8080`  
+- Swagger 또는 `/api/books` 엔드포인트로 API 확인 가능
 
-Swagger 또는 /api/books 등의 엔드포인트로 API 확인 가능
+- 기본 포트: `http://localhost:5173`  
+- Vite 개발 서버로 실행  
+- `/api` 경로는 프록시 설정을 통해 `http://localhost:8080`로 요청 전달
 
-2. 프론트엔드 실행
+---
 
-cd book-frontend
-npm install
-npm run dev
+## 🧾 주요 기능
+- 📖 도서 전체 조회  
+- 🔍 도서 단건 조회  
+- ➕ 도서 등록  
+- ❌ 도서 삭제  
 
-기본 포트: http://localhost:5173
+---
 
-Vite 개발 서버를 통해 실행
-
-/api 경로는 프록시 설정을 통해 8080 포트로 요청 전달
-
-🧾 주요 기능
-📖 도서 전체 조회
-
-🔍 도서 단건 조회
-
-➕ 도서 등록
-
-❌ 도서 삭제
-
-📂 디렉토리 구조
+## 📂 디렉토리 구조
+```text
 vite-book-crud/
-├── book-frontend/     # React + Vite 프론트엔드 프로젝트
-├── boot-backend/      # Spring Boot 백엔드 프로젝트
-├── .gitignore         # 공통 무시 설정 (node_modules, .metadata 등)
-└── README.md          # 프로젝트 설명 파일
+├── book-frontend/     # React + Vite 프론트엔드
+├── boot-backend/      # Spring Boot 백엔드
+├── .gitignore         # node_modules, .metadata 등 제외 설정
+└── README.md          # 프로젝트 설명
+
 
 <details> <summary>📌 개발 환경 참고: .metadata 제외 이유</summary>
 .metadata/ 디렉토리는 Eclipse/STS의 개인 설정 폴더로
@@ -71,25 +65,27 @@ Git에 포함하지 않으며 .gitignore에 명시되어 있습니다.
 VSCode, IntelliJ, Eclipse 등에서 자유롭게 개발 가능합니다.
 </details>
 
-🚀 배포 링크 (추후 업데이트 예정)
-프론트엔드: [링크 추가 예정]
+## 🚀 배포 링크 (추후 업데이트 예정)
+- 프론트엔드: [링크 추가 예정]  
+- 백엔드 API: [링크 추가 예정]
 
-백엔드 API: [링크 추가 예정]
+---
 
 ## 📅 React 진행 노트 (Notion)
 
-| 날짜       | 링크                                |
-|------------|-----------------------------------|
+| 날짜       | 링크                                                          |
+|------------|---------------------------------------------------------------|
 | 2025.06.25 | [React 실습 기록 - 6월 25일](https://www.notion.so/your-notion-page-url) |
-| 2025.06.26~| (추가 예정)                        |
+| 2025.06.26~| (추가 예정)                                                  |
 
 > 💡 Notion 링크는 매일 기록용으로 업데이트되며, React 학습 흐름 및 오류 해결 로그 등을 정리합니다.
 
+---
 
-📝 참고
-이 프로젝트는 개인 실습용으로 제작되었으며,
-풀스택 구조 및 클라이언트-서버 연동의 기본기를 익히는 데 목적이 있습니다.
+## 📝 참고
 
+- 이 프로젝트는 개인 실습용으로 제작되었으며,  
+  풀스택 구조 및 클라이언트-서버 연동의 기본기를 익히는 데 목적이 있습니다.
 
 ---
 
