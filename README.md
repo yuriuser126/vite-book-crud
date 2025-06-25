@@ -55,7 +55,7 @@ vite-book-crud/
 ├── boot-backend/      # Spring Boot 백엔드
 ├── .gitignore         # node_modules, .metadata 등 제외 설정
 └── README.md          # 프로젝트 설명
-
+```
 
 <details> <summary>📌 개발 환경 참고: .metadata 제외 이유</summary>
 .metadata/ 디렉토리는 Eclipse/STS의 개인 설정 폴더로
