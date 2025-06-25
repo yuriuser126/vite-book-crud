@@ -29,6 +29,7 @@ React + Vite + Spring Boot 기반의 **도서 정보 관리 풀스택 실습 프
 ```bash
 cd boot-backend
 ./gradlew bootRun
+```
 
 기본 포트: http://localhost:8080
 
