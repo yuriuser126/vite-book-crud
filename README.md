@@ -75,7 +75,7 @@ VSCode, IntelliJ, Eclipse 등에서 자유롭게 개발 가능합니다.
 
 | 날짜       | 링크                                                          |
 |------------|---------------------------------------------------------------|
-| 2025.06.25 | [React+vite 백엔드 및 프론트 세팅]([https://www.notion.so/your-notion-page-url](https://iridescent-breakfast-50b.notion.site/2025-06-25-REACT-21c75f0fde6c809bb3e8c6dfd51326cf?source=copy_link)) |
+| 2025.06.25 | [React+vite 백엔드 및 프론트 세팅](https://iridescent-breakfast-50b.notion.site/2025-06-25-REACT-21c75f0fde6c809bb3e8c6dfd51326cf?source=copy_link) |
 | 2025.06.26~| (추가 예정)                                                  |
 
 > 💡 Notion 링크는 매일 기록용으로 업데이트되며, React 학습 흐름 및 오류 해결 로그 등을 정리합니다.
