@@ -126,13 +126,14 @@ VSCode, IntelliJ, Eclipse 등에서 자유롭게 개발 가능합니다.
 ```js
 const res = await fetch('/api/books');
 const data = await res.json();
+```
 ⚠️ useEffect 두 번 실행되는 이유
 React 개발환경에서 StrictMode가 감싸고 있어 의도적으로 두 번 실행
 
 🗺️ React Router 사용
 Route, Routes로 경로 분리, 컴포넌트 구성
 
-</details>```
+</details>
 
 > 💡 Notion 링크는 매일 기록용으로 업데이트되며, React 학습 흐름 및 오류 해결 로그 등을 정리합니다.
 
