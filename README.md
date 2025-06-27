@@ -97,7 +97,42 @@ VSCode, IntelliJ, Eclipse 등에서 자유롭게 개발 가능합니다.
 | 날짜       | 링크                                                          |
 |------------|---------------------------------------------------------------|
 | 2025.06.25 | [React+vite 백엔드 및 프론트 세팅](https://iridescent-breakfast-50b.notion.site/2025-06-25-REACT-21c75f0fde6c809bb3e8c6dfd51326cf?source=copy_link) |
-| 2025.06.26~| (추가 예정)                                                  |
+| 2025.06.26~| [React 비동기 fetch & 상태관리 구현](https://iridescent-breakfast-50b.notion.site/2025-06-27-REACT-vite-sts-21f75f0fde6c8096bae5d5fb154ac6d3?source=copy_link)                                                 |
+
+
+<details>
+<summary>📌 2025.06.27 작업 요약 및 이해 정리</summary>
+
+### ✅ 오늘 작업 요약
+- 전체 React 프론트 구조 구성
+- `fetch`를 통해 백엔드 API 연동
+- `res`로 결과 받아 `useState`로 상태 관리
+- `useEffect`로 생명주기 흐름 확인
+- StrictMode로 인한 이펙트 두 번 실행 현상 확인
+- 라우팅 설정 및 페이지 분리 작업
+
+---
+
+### 🧠 내가 이해한 개념
+
+#### 🔁 useEffect
+- 렌더링 이후 실행되는 hook
+- 의존성 배열 사용 시 제어 가능
+
+#### 💾 useState
+- 상태 저장 및 리렌더링 유도
+
+#### 🌐 fetch + res.json()
+```js
+const res = await fetch('/api/books');
+const data = await res.json();
+⚠️ useEffect 두 번 실행되는 이유
+React 개발환경에서 StrictMode가 감싸고 있어 의도적으로 두 번 실행
+
+🗺️ React Router 사용
+Route, Routes로 경로 분리, 컴포넌트 구성
+
+</details>```
 
 > 💡 Notion 링크는 매일 기록용으로 업데이트되며, React 학습 흐름 및 오류 해결 로그 등을 정리합니다.
 
