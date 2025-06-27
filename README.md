@@ -22,6 +22,15 @@ React + Vite + Spring Boot 기반의 **도서 정보 관리 풀스택 실습 프
 
 ---
 
+## 🔧 Git Push 충돌 해결법
+
+> 원격 저장소에 커밋이 있어서 push가 안 될 경우 아래 명령어로 해결할 수 있습니다:
+
+```bash
+git pull origin main --rebase
+git push origin main
+---
+
 ## 🔁 실행 방법
 
 ### 1. 백엔드 실행
