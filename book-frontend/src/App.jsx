@@ -6,6 +6,7 @@ import { Route, Routes } from 'react-router-dom'
 import JoinForm from './pages/user/JoinForm'
 import Home from './pages/home'
 import LoginForm from './pages/user/LoginForm'
+import SaveForm from './pages/book/SaveForm'
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/joinForm' element={<JoinForm />} />
         <Route path='/LoginForm' element={<LoginForm />} />
+        <Route path='/SaveForm' element={<SaveForm />} />
       </Routes>
       </div>      
     </>
