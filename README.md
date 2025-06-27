@@ -44,12 +44,12 @@ cd boot-backend
 ./gradlew bootRun
 ```
 
-- 기본 포트: `http://localhost:8080`  
+- 기본 포트: `http://localhost:8383`  
 - Swagger 또는 `/api/books` 엔드포인트로 API 확인 가능
 
 - 기본 포트: `http://localhost:5173`  
 - Vite 개발 서버로 실행  
-- `/api` 경로는 프록시 설정을 통해 `http://localhost:8080`로 요청 전달
+- `/api` 경로는 프록시 설정을 통해 `http://localhost:8383`로 요청 전달
 
 ---
 
