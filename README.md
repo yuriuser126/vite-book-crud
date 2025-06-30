@@ -203,7 +203,7 @@ submitBook is not defined 오류: 함수 주석 해제 필요
 
 Axios.get(url, book) 잘못된 인자 → 두 번째 인자 제거
 
-</details> ```
+</details> 
 
 > 💡 Notion 링크는 매일 기록용으로 업데이트되며, React 학습 흐름 및 오류 해결 로그 등을 정리합니다.
 
