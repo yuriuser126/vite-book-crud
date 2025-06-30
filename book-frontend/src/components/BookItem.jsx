@@ -1,6 +1,8 @@
 import React from 'react'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
+
 
 // const BookItem = () => {
 const BookItem = (props) => {
@@ -12,10 +14,15 @@ const {id,title,author} = props.book;
       <Card.Body>
         <Card.Title  >{title}</Card.Title>
         
-        <Button variant="primary">{author}</Button>
+        {/* <Button variant="primary">{author}</Button> */}
+        <Link to={"book/"+id}>상세보기</Link>
       </Card.Body>
     </Card>
   )
 }
 
 export default BookItem
+
+
+
+

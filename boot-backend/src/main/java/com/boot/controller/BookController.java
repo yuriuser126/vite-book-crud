@@ -48,7 +48,8 @@ public class BookController {
 	}
 	
 	//책 정보 저장 , <Book>로 설정 @RequestBody json 형태라 null값받아온거 고침
-	@PostMapping("/save")
+	@CrossOrigin
+	@PostMapping("/book")
 //	public ResponseEntity<Book> saveBook(Book book) {
 		public ResponseEntity<Book> saveBook(@RequestBody Book book) {
 		log.info("@# saveBook()");
@@ -59,6 +60,7 @@ public class BookController {
 	}
 	
 	//하나의 책 정보 조회
+	@CrossOrigin
 	@GetMapping("/book/{id}")
 	public ResponseEntity<Book> getBook(@PathVariable(name = "id") Long id) {
 		log.info("@# getBook()");
@@ -67,6 +69,7 @@ public class BookController {
 	}
 	
 	//하나의 책 정보 수정
+	@CrossOrigin
 	@PutMapping("/book/{id}")
 	public ResponseEntity<Book> updateBook(@PathVariable(name = "id") Long id,@RequestBody Book book) {
 		log.info("@# updateBook()");
@@ -78,6 +81,7 @@ public class BookController {
 	}
 	
 	//하나의 책 정보 삭제 / ?또는 String 사용 / 서비스에서 String으로 보내니까
+	@CrossOrigin
 	@DeleteMapping("/book/{id}")
 	public ResponseEntity<?> delBook(@PathVariable(name = "id") Long id) {
 		log.info("@# delBook()");
