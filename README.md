@@ -99,6 +99,9 @@ VSCode, IntelliJ, Eclipse 등에서 자유롭게 개발 가능합니다.
 |------------|---------------------------------------------------------------|
 | 2025.06.25 | [React+vite 백엔드 및 프론트 세팅](https://iridescent-breakfast-50b.notion.site/2025-06-25-REACT-21c75f0fde6c809bb3e8c6dfd51326cf?source=copy_link) |
 | 2025.06.26~| [React 비동기 fetch & 상태관리 구현](https://iridescent-breakfast-50b.notion.site/2025-06-27-REACT-vite-sts-21f75f0fde6c8096bae5d5fb154ac6d3?source=copy_link)                                                 |
+| 2025.06.27~| [React + Axios를 활용한 도서 상세 조회 및 수정 처리](https://iridescent-breakfast-50b.notion.site/2025-06-28-REACT-vite-sts-21f75f0fde6c80a9bf6ef4ec7874bc23?source=copy_link)                                                 |
+
+
 
 
 <details>
@@ -135,6 +138,72 @@ React 개발환경에서 StrictMode가 감싸고 있어 의도적으로 두 번 
 Route, Routes로 경로 분리, 컴포넌트 구성
 
 </details>
+
+
+<details>
+<summary>📌 2025.06.30 작업 요약 및 이해 정리</summary>
+
+### ✅ 오늘 작업 요약
+- React에서 책 상세 조회 및 수정 기능 구현 완료
+- `useParams`를 활용해 `id` 기반 도서 조회
+- `useEffect`로 페이지 진입 시 데이터 불러오기
+- Axios를 통한 GET 및 PUT 요청 처리
+- `useState`로 폼 입력 상태 관리
+- 수정 완료 시 `useNavigate`로 홈(`/`) 이동
+- 커밋 메시지 및 문서 제목 깔끔하게 정리
+
+---
+
+### 🧠 내가 이해한 개념
+
+#### 🔍 useParams
+- React Router의 훅
+- URL에 포함된 파라미터 추출
+```js
+const { id } = useParams(); // /update/3 → id = 3
+
+
+
+🌀 useEffect + Axios
+컴포넌트 마운트 시 GET 요청 수행
+
+```bash
+useEffect(() => {
+  Axios.get(`http://localhost:8383/book/${id}`)
+    .then((res) => setBook(res.data))
+    .catch((err) => console.error(err));
+}, []);
+```
+
+💾 useState
+상태 기반 렌더링 처리
+
+```bash
+const [book, setBook] = useState({ title: "", author: "" });
+```
+
+📤 Axios PUT 요청
+수정 완료 시 서버에 데이터 전송
+
+```bash
+Axios.put(`http://localhost:8383/book/${id}`, book);
+```
+
+
+🧭 useNavigate
+수정 성공 시 홈으로 리디렉션
+
+```bash
+navigate('/');
+```
+
+
+⚠️ 에러 트러블슈팅
+submitBook is not defined 오류: 함수 주석 해제 필요
+
+Axios.get(url, book) 잘못된 인자 → 두 번째 인자 제거
+
+</details> ```
 
 > 💡 Notion 링크는 매일 기록용으로 업데이트되며, React 학습 흐름 및 오류 해결 로그 등을 정리합니다.
 
