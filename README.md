@@ -100,6 +100,10 @@ VSCode, IntelliJ, Eclipse 등에서 자유롭게 개발 가능합니다.
 | 2025.06.25 | [React+vite 백엔드 및 프론트 세팅](https://iridescent-breakfast-50b.notion.site/2025-06-25-REACT-21c75f0fde6c809bb3e8c6dfd51326cf?source=copy_link) |
 | 2025.06.26~| [React 비동기 fetch & 상태관리 구현](https://iridescent-breakfast-50b.notion.site/2025-06-27-REACT-vite-sts-21f75f0fde6c8096bae5d5fb154ac6d3?source=copy_link)                                                 |
 | 2025.06.27~| [React + Axios를 활용한 도서 상세 조회 및 수정 처리](https://iridescent-breakfast-50b.notion.site/2025-06-28-REACT-vite-sts-21f75f0fde6c80a9bf6ef4ec7874bc23?source=copy_link)                                                 |
+| 2025.06.28~| [React + Axios를 활용한 도서 삭제처리](https://iridescent-breakfast-50b.notion.site/2025-06-29-REACT-vite-sts-1-22375f0fde6c807194d3f85981ff95e4?source=copy_link)                                                 |
+
+
+
 
 
 
@@ -204,6 +208,61 @@ submitBook is not defined 오류: 함수 주석 해제 필요
 Axios.get(url, book) 잘못된 인자 → 두 번째 인자 제거
 
 </details> 
+
+
+<details>
+<summary>📌 2025.06.30 작업 요약 및 이해 정리</summary>
+
+### ✅ 오늘 작업 요약
+- React에서 책 삭제 기능 구현 완료
+- Axios를 활용해 DELETE 요청 처리
+- 삭제 성공 시 알림 후 페이지 이동 처리
+- 버튼 클릭 이벤트와 함수 연결 완료
+
+---
+
+### 🧠 내가 이해한 개념
+
+#### 🔥 DELETE 요청 처리 (Axios)
+- `Axios.delete(url)` 로 서버에 삭제 요청 전송
+- 요청 성공 시 `then` 블록에서 후속 작업 수행
+- 요청 실패 시 `catch` 블록에서 오류 처리
+
+```js
+Axios.delete("http://localhost:8383/book/" + id)
+  .then(response => {
+    if (response != null) {
+      alert("책 삭제에 성공했습니다");
+      navigate("/" + id); // 삭제 성공 후 리다이렉트
+    } else {
+      alert("책 삭제에 실패했습니다");
+    }
+  })
+  .catch(error => {
+    console.error("Request failed:", error);
+    alert("예외 처리가 발생했습니다");
+  });
+```
+
+🔘 버튼 이벤트 연결
+<Button> 컴포넌트에 onClick 이벤트로 삭제 함수 연결
+
+클릭 시 deleteBook 함수 실행
+
+```bash
+<Button variant="danger" onClick={deleteBook}>삭제</Button>
+
+```
+
+
+⚠️ 참고 사항
+navigate 함수는 React Router의 useNavigate 훅으로 선언 필요
+
+삭제 성공 후 리다이렉트 경로는 요구사항에 맞게 조정 가능
+
+응답이 null이 아닐 때 성공 처리하도록 조건문 작성
+</details>
+
 
 > 💡 Notion 링크는 매일 기록용으로 업데이트되며, React 학습 흐름 및 오류 해결 로그 등을 정리합니다.
 
