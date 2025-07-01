@@ -8,6 +8,7 @@ import Home from './pages/home'
 import LoginForm from './pages/user/LoginForm'
 import SaveForm from './pages/book/SaveForm'
 import UpdateForm from './pages/book/UpdateForm'
+// import DeleteForm from './pages/book/DeleteForm'
 import Detail from './pages/book/detail'
 
 
@@ -25,6 +26,7 @@ function App() {
         <Route path='/LoginForm' element={<LoginForm />} />
         <Route path='/SaveForm' element={<SaveForm />} />
         <Route path='/UpdateForm/:id' element={<UpdateForm />} />
+        {/* <Route path='/DeleteForm/:id' element={<DeleteForm />} /> */}
         <Route path='/book/:id' element={<Detail />} />
       </Routes>
       </div>      

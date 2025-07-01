@@ -18,7 +18,7 @@ const Detail = (props) => {
     //상태변수를 정의(books : 현재상태 ,setBook : 상태를업데이트하기위한함수)
     const [books, setBook] = useState({
         id: "",
-       
+
         author: ""
     });
 
@@ -51,12 +51,12 @@ const Detail = (props) => {
         Axios.get("http://localhost:8383/book/" + id)
             .then(response => {
                 // 성공적인 응답처리
-                console.log(11, response.data)
-                setBook(response.data)
+                console.log(11, response.data);
+                setBook(response.data);
             })
             .catch(error => {
                 // 오류처리
-                console.error("Request failed:", error)
+                console.error("Request failed:", error);
             })
 
 
@@ -65,7 +65,33 @@ const Detail = (props) => {
 
     const updateBook = () => {
         console.log(43, id)
-        navigate("/UpdateForm/"+id)
+        navigate("/UpdateForm/" + id)
+    }
+
+    const deleteBook = () => {
+        console.log(44, id)
+
+        Axios.delete("http://localhost:8383/book/" + id)
+            .then(response => {
+                // 성공적인 응답처리
+                console.log(11, response.data);
+
+                if (response != null) {
+                    alert("책 삭제에 성공했습니다")
+                    navigate("/" + id)
+                    // 삭제성공시 홈 이동 "/"
+                } else {
+                    alert("책 삭제에 실패했습니다")
+                    
+                }
+                
+                
+            })
+            .catch(error => {
+                // 오류처리
+                console.error("Request failed:", error);
+                alert("예외 처리가 발생했습니다")
+            })
     }
 
 
@@ -74,6 +100,10 @@ const Detail = (props) => {
         <div>
             <h1>책 상세보기</h1>
             <Button variant="info" onClick={updateBook} >수정</Button>
+            {' '}
+            {/* {' '}이거 공백 */}
+            <Button variant="danger" onClick={deleteBook} >삭제</Button>
+
             <hr />
             <h3>
                 {books.title}

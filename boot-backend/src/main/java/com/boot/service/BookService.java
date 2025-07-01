@@ -62,6 +62,8 @@ public class BookService {
 	
 //	string타입으로 delete 보내겠다 작동은 안쪽 id가져와서 지울거임
 	public String delBook(Long id) {
+		log.info("@# delBook()");
+		log.info("@# id=>()"+id);
 		bookRepository.deleteById(id);
 		
 		

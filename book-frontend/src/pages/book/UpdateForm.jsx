@@ -31,6 +31,7 @@ const UpdateForm = (props) => {
 
     }
 
+    // 조회 유즈이펙트 지나서,아이디별
     //useEffect: React의 생명주기 훅으로, 컴포넌트가 처음 렌더링될때 한번 실행(마운트 - 언마운트)
         useEffect(() => {
             console.log("@# Detail useEffect호출 ")
@@ -51,6 +52,7 @@ const UpdateForm = (props) => {
         }, []);
   
 
+        //아이디별 저장 유즈이펙트 -> 이 과정이 수정이 되는것임
         const submitBook = (e) => {
             e.preventDefault(); //submitaction 금지
             console.log(77, book)
